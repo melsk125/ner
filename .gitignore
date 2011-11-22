@@ -38,6 +38,7 @@ Thumbs.db
 ##########
 *.freq
 *.diff
+*.xlsx
 
 # Data #
 ########
