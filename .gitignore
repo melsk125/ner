@@ -6,6 +6,7 @@ Compiled source #
 *.exe
 *.o
 *.so
+*.pyc
 
 # Packages #
 ############
@@ -32,3 +33,13 @@ Compiled source #
 ehthumbs.db
 Icon?
 Thumbs.db
+
+# Output #
+##########
+*.freq
+*.diff
+
+# Data #
+########
+data/*
+

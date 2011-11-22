@@ -1,5 +1,6 @@
 import re
 import sys
+import lib
 
 f = open(sys.argv[1])
 raw = f.read()
@@ -7,21 +8,16 @@ lines = re.split('\n', raw)[:-1]
 lines = [re.split('\t', line) for line in lines]
 entries = [line[4+int(line[2]):4+int(line[2])+int(line[3])] for line in lines]
 
-#print lines[0]
-#print entries[0]
+list = lib.collapse(entries)
 
-list = []
-for entry in entries:
-	list.extend(entry)
+list = [node.strip() for node in list]
 
-set = set(list)
-#print set
+s = set(list)
 
-dict = dict([(el, 0) for el in set])
-#print dict
+d = dict([(el, 0) for el in s])
 
 for node in list:
-	dict[node] += 1
+	d[node] += 1
 
-for word in sorted(dict):
-	print word + '\t' + str(dict[word])
+for word in sorted(d):
+	print word + '\t' + str(d[word])
