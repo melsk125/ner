@@ -24,7 +24,7 @@ for term in terms:
 		f,a,b,c,d = worddict[term[i]]
 		if len(term) == 1:
 			worddict[term[i]] = f+1,a+1,b,c,d
-		if i == 0:
+		elif i == 0:
 			worddict[term[i]] = f+1,a,b+1,c,d
 		elif i == (len(term)-1):
 			worddict[term[i]] = f+1,a,b,c,d+1
