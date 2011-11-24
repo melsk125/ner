@@ -11,6 +11,8 @@ list = lib.get_eterms(lines)
 list = [entry.lower() for entry in list]
 list = [entry.strip() for entry in list]
 
+if '' in list: list.remove('')
+
 s = set(list)
 
 d = dict([(el, 0) for el in s])

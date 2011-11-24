@@ -1,33 +1,40 @@
 import re
 import sys
+import nltk
 import lib
 
-f = open(sys.argv[1])
+f=open(sys.argv[1])
 raw = f.read()
+
+sys.stderr.write("Read finished\n")
 
 lines = lib.get_dat(raw)
 list = lib.get_eterms(lines)
 
+sys.stderr.write("Extracted keywords for each line\n")
+sys.stderr.write("Total: " + str(len(list)) + " entries\n")
+
 list = [entry.lower() for entry in list]
 
-terms = [entry.strip() for entry in list]
-words = lib.collapse([entry.split() for entry in list])
+sys.stderr.write("Decapitalized\n")
 
-termset = set(terms)
-wordset = set(words)
+s = set(list)
 
-worddict = dict([(el, (0,0,0,0)) for el in wordset])
+ulist = [entry.split() for entry in s]
 
-for term in termset:
-	term = term.split()
-	for i in range(len(term)):
-		f,a,b,c = worddict[term[i]]
-		if i == 0:
-			worddict[term[i]] = f+1,a+1,b,c
-		elif i == (len(term)-1):
-			worddict[term[i]] = f+1,a,b,c+1
-		else:
-			worddict[term[i]] = f+1,a,b+1,c
+sys.stderr.write("Extracted unique entries\n")
+sys.stderr.write("Total: " + str(len(ulist)) + " unique entries\n")
 
-for word, (f,a,b,c) in sorted(worddict.items(), key=lambda entry: entry[1][0], reverse=True):
-	print word + '\t' + str(f) + '\t' + str(a) + '\t' + str(b) + '\t' + str(c)
+nusize = len(ulist)
+
+sys.stderr.write("POS Tag started\n")
+
+taggedlist = []
+
+for i in range(nusize):
+	if i%1000 == 0:
+		sys.stderr.write(str(i) + "/" + str(nusize) + "\n")
+	taggedlist.append(nltk.pos_tag(ulist[i]))
+
+sys.stderr.write("POS Tag finished\n");
+
