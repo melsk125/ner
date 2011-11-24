@@ -18,7 +18,7 @@ wordset = set(words)
 
 worddict = dict([(el, (0,0,0,0,0)) for el in wordset])
 
-for term in termset:
+for term in terms:
 	term = term.split()
 	for i in range(len(term)):
 		f,a,b,c,d = worddict[term[i]]
