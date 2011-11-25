@@ -20,21 +20,37 @@ sys.stderr.write("Decapitalized\n")
 
 s = set(list)
 
-ulist = [entry.split() for entry in s]
+s.discard('')
 
-sys.stderr.write("Extracted unique entries\n")
-sys.stderr.write("Total: " + str(len(ulist)) + " unique entries\n")
+posdict = dict([])
 
-nusize = len(ulist)
+sys.stderr.write("Start tagging\n")
 
-sys.stderr.write("POS Tag started\n")
+count = 0
+tcount = len(s)
 
-taggedlist = []
+for entry in s:
+	if count % 1000 == 0:
+		sys.stderr.write("Tagging word " + str(count) + "/" + str(tcount) + "\n");
+	count += 1
+	tagged_entry = nltk.pos_tag(nltk.word_tokenize(entry))
+	tag_list = [word[1] for word in tagged_entry]
+	posdict[entry] = lib.collapse_string(tag_list, '/')
+	
+sys.stderr.write("End tagging\n")
 
-for i in range(nusize):
-	if i%1000 == 0:
-		sys.stderr.write(str(i) + "/" + str(nusize) + "\n")
-	taggedlist.append(nltk.pos_tag(ulist[i]))
+posset = set(posdict.values())
 
-sys.stderr.write("POS Tag finished\n");
+posfreq = dict([(posent, 0) for posent in posset])
 
+sys.stderr.write("Start counting for each POS tag string\n")
+
+for entry in list:
+	if entry != '':
+		posfreq[posdict[entry]] += 1
+
+sys.stderr.write("Finished counting\n");
+sys.stderr.write("Start writing output\n");
+
+for pos, freq in sorted(posfreq.items(), key = lambda entry: entry[1], reverse=True):
+	print pos + '\t' + str(freq)

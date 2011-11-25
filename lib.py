@@ -20,4 +20,10 @@ def get_freq(raw):
 	d = dict([(e[0],int(e[1])) for e in lines])
 	return d
 
-
+def collapse_string(list, ch):
+	ret = ''
+	for item in list:
+		ret += item
+		ret += ch
+	ret = ret[:-1]
+	return ret
