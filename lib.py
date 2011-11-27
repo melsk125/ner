@@ -20,6 +20,12 @@ def get_freq(raw):
 	d = dict([(e[0],int(e[1])) for e in lines])
 	return d
 
+def get_multidict(raw):
+	lines = re.split('\n', raw)[:-1]
+	lines = [re.split('\t', line) for line in lines]
+	d = dict([(e[0], [int(s) for s in e[1:]]) for e in lines])
+	return d
+
 def collapse_string(list, ch):
 	ret = ''
 	for item in list:

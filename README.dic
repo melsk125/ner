@@ -1,0 +1,105 @@
+--------------------------------------------
+Maintenance History
+--------------------------------------------
+2011/11/21 keyword files (Aizawa)
+2011/11/23 add some statistics for Japanese terms (Aizawa)
+
+--------------------------------------------
+
+Keyword files
+-------------------------------------------------------------------
+-rw-r--r--+ 1 akiko staff  237234750 11月 21 19:56 kw_cinii_sv.tsv
+-rw-r--r--+ 1 akiko staff 5462352978 11月 21 19:58 kw_cinii_jst.tsv
+-rw-r--r--+ 1 akiko staff   28421718 11月 21 20:09 kw_kaken_je.tsv
+-rw-r--r--+ 1 akiko staff   23689526 11月 21 20:57 kw_ieee.tsv
+-rw-r--r--+ 1 akiko staff   31352755 11月 21 20:57 kw_kluwer.tsv
+-rw-r--r--+ 1 akiko staff  128318180 11月 21 21:00 kw_springer.tsv
+-rw-r--r--+ 1 akiko staff   14115268 11月 21 21:01 kw_oup.tsv
+-rw-r--r--+ 1 akiko staff   16545001 11月 21 21:14 kw_sciterm.tsv
+-rw-r--r--+ 1 akiko staff     401538 11月 21 21:16 kw_ipsjterm.tsv
+-------------------------------------------------------------------
+
+=== Dictionaries Edited by Human Experts ===
+
+kw_ipsjterm.tsv 
+	(Terms extracted from Handbook of Information Processing Society in Japan)
+	(Scanned and Manually corrected. We tend to think it's safe to
+	use indexes at the end of published text/handbooks.)
+
+kw_sciterm.tsv (http://sciterm.nii.ac.jp/)
+	(The copyright is very complex. Only for the internal use.)
+
+kw_cinii_jst.tsv
+	(!-!- Special attention: No disclosure of this resource !-!-)
+	(These keywords are assigned by JST to each individual paper
+	manyally. They are originated from JST bilingual terms dictionary
+	which is not publicly available.)
+
+=== Keywords by the Authors of the Papers ===
+
+kw_{ieee,kluwer,oup,springer}.tsv
+	comes from NII-REO (http://reo.nii.ac.jp/), electronic journal
+	archive service at NII.
+
+kw_cinii_sv.tsv
+	comes from NII-CiNii (http://ci.nii.ac.jp), Scholarly and Academic I
+	nformation Navigator
+
+kw_kaken_sv.tsv
+	comes from NII-Kaken (http://kaken.nii.ac.jp), a database of 
+	Grants-in-Aid for Scientific Research	
+
+****Format***
+dbname<tab>url<tab>jterm_num<tab>eterm_num<tab>jterm1<tab>..<tab>jtermn<tab>eterm1<tab>...<tab>etermm<ret>
+
+=== Extracted files ===
+kw_jst.je
+	extracted from kw_cinii_jst.tsv
+	dictionary with frequency information
+
+kw_nii_sv.jpn
+	extracted from kw_cinii_sv.tsv
+kw_nii_sv.eng
+	extracted from kw_cinii_sv.tsv
+kw_nii_sv.je
+	extracted from kw_cinii_sv.tsv
+
+kw_reo.eng
+	extracted from kw_{ieee,kluwer,oup,springer}.tsv
+
+kw_trans
+	J-E translation pair
+	extracted from kw_nii_sv.je, kw_jst.je, kw_sciterm.tsv, kw_ipsjterm.tsv
+
+--------------------------------------
+Statistics for Japanese terms
+
+kw_trans.simpair.j
+	Japanese keywords with common English translation and EditDistance=1
+kw_trans.simrule.jword
+	word substitution rules obtained from the above
+kw_trans.simrule.jchar
+	character substitution rules obtained from the above
+
+kw_nii_sv.jpn.w0.stat
+kw_nii_sv.jpn.m0.stat
+
+	{word,POS} sequence<tab>f,f0,fb,fi,fe<ret>
+		f: total frequency
+		f0: the number of times <term> appears
+		    as independt keywords
+		fb: the number of times <term> appears 
+                    at the beginning of longer keywords
+		fm: the number of times <term> appears 
+                    in the middle of longer keywords
+		fe: the number of times <term> appears 
+                    at the end of longer keywords
+		f = f0 + fb + fm + fe
+
+--------------------------------------
+Related URLs 
+--------------------------------------
+http://157.1.128.237/~akiko/dict
+http://157.1.128.237/~akiko/termext
+http://157.1.128.237/~akiko/adict
+(guest/i2nic)
