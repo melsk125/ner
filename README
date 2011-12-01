@@ -1,0 +1,5 @@
+Repository: ner
+Owner: Panot Chaimongkol
+
+This repository "ner" is my Bachelor thesis research.
+The aim is to build a system which, given bilingual lexicon, determines whether a word is a technical term.
