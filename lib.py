@@ -33,3 +33,33 @@ def collapse_string(list, ch):
 		ret += ch
 	ret = ret[:-1]
 	return ret
+
+def min2(a, b):
+    if a < b:
+        return a
+    else:
+        return b
+
+def levenshtein(str1, str2):
+    rownum = len(str1)+1
+    colnum = len(str2)+1
+    mat = [[0 for col in range(colnum)] for row in range(rownum)]
+    print "Rownum", len(mat)
+    print "Colnum", len(mat[0])
+    for i in range(rownum):
+        for j in range(colnum):
+            if i==0:
+                mat[i][j] = j
+            elif j==0:
+                mat[i][j] = i
+            else:
+                if str1[i-1]==str2[j-1]:
+                    diag = mat[i-1][j-1]
+                else:
+                    diag = mat[i-1][j-1]+1
+                mat[i][j] = min2(diag,
+                                min2(mat[i-1][j]+1,
+                                     mat[i][j-1]+1))
+    for row in mat: print row
+    return mat[rownum-1][colnum-1]
+
