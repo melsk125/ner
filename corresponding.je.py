@@ -6,7 +6,24 @@ parser = OptionParser()
 
 parser.add_option("-l", action="store_true", dest="lowercase", default=False, help="force lowercase")
 
+parser.add_option("-L", action="store_true", dest="lemmatize", default=False, help="force lemmatize")
+
 options, args = parser.parse_args()
+
+lowercase = options.lowercase
+lemmatize = options.lemmatize
+
+if lowercase:
+    sys.stderr.write("Lowercase\n")
+else:
+    sys.stderr.write("Not lowercase\n")
+
+if lemmatize:
+    sys.stderr.write("Lemmatize\n")
+    import nltk
+    wnl = nltk.stem.WordNetLemmatizer()
+else:
+    sys.stderr.write("Not lemmatize\n")
 
 if len(args) == 0:
     raw = sys.stdin.read()
@@ -20,11 +37,38 @@ je_dict = dict([])
 
 sys.stderr.write("Start making dict\n")
 
+count = 0
+
+sys.stderr.write("Total: " + str(len(lines)) + " entries\n")
+
 for line in lines:
-    if options.lowercase == True:
-        add_text = line[2].lower()
+    if count%1000 == 0:
+        sys.stderr.write(str(count) + " ")
+    if count%10000 == 0:
+        sys.stderr.write("\n")
+    count += 1
+
+    add_text = line[2]
+    
+    if lemmatize:
+        pos = nltk.pos_tag(add_text.split())
+        lterm = []
+        for word, p in pos:
+            if word[0] == 'N':
+                lterm.append(wnl.lemmatize(word))
+            elif word[0] == 'V':
+                lterm.append(wnl.lemmatize(word, 'v'))
+            elif word[0] == 'J':
+                lterm.append(wnl.lemmatize(word, 'a'))
+            else:
+                lterm.append(word)
+        add_text = lib.collapse_string(lterm, ' ')
+    
+    
+    if lowercase == True:
+        add_text = add_text.lower()
     else:
-        add_text = line[2]
+        add_text = add_text
     
 	if line[1] in je_dict:
 		je_dict[line[1]].add(add_text)
