@@ -47,9 +47,7 @@ for line in lines:
     if count%10000 == 0:
         sys.stderr.write("\n")
     count += 1
-
     add_text = line[2]
-    
     if lemmatize:
         pos = nltk.pos_tag(add_text.split())
         lterm = []
@@ -63,19 +61,17 @@ for line in lines:
             else:
                 lterm.append(word)
         add_text = lib.collapse_string(lterm, ' ')
-    
-    
-    if lowercase == True:
+    if lowercase:
         add_text = add_text.lower()
+    if (line[1] in je_dict):
+        je_dict[line[1]].add(add_text)
     else:
-        add_text = add_text
-    
-	if line[1] in je_dict:
-		je_dict[line[1]].add(add_text)
-	else:
-		je_dict[line[1]] = set([add_text])
+        je_dict[line[1]] = set([add_text])
+        
 
 sys.stderr.write("Finished making dict\n")
+
+sys.stderr.write(str(len(je_dict)))
 
 for jw, ew in sorted(je_dict.items(), key=lambda entry: len(entry[1]), reverse=True):
 	print jw + '\t' + str(len(ew)) + '\t' + lib.collapse_string(list(ew), '\t')

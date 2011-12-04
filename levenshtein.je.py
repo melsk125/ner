@@ -18,7 +18,7 @@ count = 0
 size = len(lines)
 
 for line in lines:
-    if count % 500 == 0:
+    if count % 100 == 0:
         sys.stderr.write(str(count) + "/" + str(size) + "\n")
     count += 1
     #    distance_list.append((line[0], sorted([(str1, str2, lib.levenshtein(str1, str2)) for str1, str2 in itertools.combinations(line[1], 2)], key=lambda entry: entry[2], reverse=True)))
