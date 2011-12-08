@@ -1,3 +1,4 @@
+import re
 import sys
 import lib
 from optparse import OptionParser
@@ -47,26 +48,28 @@ for line in lines:
     if count%10000 == 0:
         sys.stderr.write("\n")
     count += 1
-    add_text = line[2]
-    if lemmatize:
-        pos = nltk.pos_tag(add_text.split())
-        lterm = []
-        for word, p in pos:
-            if word[0] == 'N':
-                lterm.append(wnl.lemmatize(word))
-            elif word[0] == 'V':
-                lterm.append(wnl.lemmatize(word, 'v'))
-            elif word[0] == 'J':
-                lterm.append(wnl.lemmatize(word, 'a'))
-            else:
-                lterm.append(word)
-        add_text = lib.collapse_string(lterm, ' ')
+    add_text = [word for word in re.split("[()]", line[2]) if word != ""]
+    for i in range(len(add_text)):
+        if lemmatize:
+            pos = nltk.pos_tag(add_text[i].split())
+            lterm = []
+            for word, p in pos:
+                if word[0] == 'N':
+                    lterm.append(wnl.lemmatize(word))
+                elif word[0] == 'V':
+                    lterm.append(wnl.lemmatize(word, 'v'))
+                elif word[0] == 'J':
+                    lterm.append(wnl.lemmatize(word, 'a'))
+                else:
+                    lterm.append(word)
+            add_text[i] = lib.collapse_string(lterm, ' ')
     if lowercase:
-        add_text = add_text.lower()
+        add_text = [word.lower() for word in add_text]
     if (line[1] in je_dict):
-        je_dict[line[1]].add(add_text)
+        for word in add_text:
+            je_dict[line[1]].add(word)
     else:
-        je_dict[line[1]] = set([add_text])
+        je_dict[line[1]] = set(add_text)
         
 
 sys.stderr.write("Finished making dict\n")
