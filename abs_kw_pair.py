@@ -41,7 +41,7 @@ for i in range(len(lines)):
             for k in range(len(keywords)):
                 keyword = keywords[k]
                 keyword_len = len(keyword)
-                if keyword == abstract[j:j+keyword_len]:
+                if keyword_len > 0 and keyword == abstract[j:j+keyword_len]:
                     output.append((keyword[0], "B", k+1))
                     print keyword[0] + "\tB\t" + str(i+1) + "\t" + str(k+1)
                     for l in keyword[1:]:
@@ -51,6 +51,8 @@ for i in range(len(lines)):
                     j += keyword_len
                 if found:
                     break
+            if j >= len(abstract):
+                break
             output.append((abstract[j], "O", 0))
             print abstract[j] + "\tO\t" + str(i+1) + "\t0"
             j += 1
