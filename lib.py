@@ -6,6 +6,11 @@ def collapse(list):
 		ret.extend(el)
 	return ret
 
+def get_dat_sgml(raw):
+    lines = re.split('\n', raw)[:-1]
+    lines = [re.findall(r"<(\w+)>(.+)</\1>", line) for line in lines]
+    return lines
+
 def get_dat(raw):
 	lines = re.split('\n', raw)[:-1]
 	lines = [re.split('\t', line) for line in lines]
