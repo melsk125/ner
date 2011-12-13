@@ -1,8 +1,17 @@
 import sys
 import random
+from optparse import OptionParser
 
-fn = sys.argv[1]
-lc = int(sys.argv[2])
+optionParser = OptionParser()
+
+optionParser.add_option("-s", action="store_true", dest="sort", default=False, help="sort")
+
+options, args = optionParser.parse_args()
+
+sort = options.sort
+
+fn = args[0]
+lc = int(args[1])
 
 f = open(fn)
 lines = f.readlines()
@@ -12,6 +21,8 @@ sys.stderr.write("Take " + str(lc) + " samples\n")
 
 random.seed()
 
-lnum = sorted(random.sample(range(len(lines)), lc))
+lnum = random.sample(range(len(lines)), lc)
+if sort:
+    lnum = sorted(lnum)
 for ln in lnum:
-    print lines[ln]
+    sys.stdout.write(lines[ln])
