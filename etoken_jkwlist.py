@@ -4,6 +4,7 @@ import re
 import codecs
 from optparse import OptionParser
 from nltk import word_tokenize
+from features import print_features
 
 optionParser = OptionParser()
 
@@ -49,7 +50,8 @@ sys.stderr.write(str(i) + "\n")
 sys.stderr.write(str(len(d)) + "\n")
 
 for k, v in d.iteritems():
-    out.write(k)
+    out.write(k + '\t')
+    out.write(print_features(k))
     for j in v:
         out.write('\t' + j)
     out.write('\n')
