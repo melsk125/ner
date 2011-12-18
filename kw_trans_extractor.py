@@ -2,6 +2,7 @@ import sys
 import re
 from optparse import OptionParser
 from nltk import word_tokenize
+from features import print_features
 
 optionParser = OptionParser()
 
@@ -33,6 +34,7 @@ sys.stderr.write(str(len(d)) + "\n")
 
 for k, v in d.iteritems():
     sys.stdout.write(k)
+    sys.stdout.write("\t" + print_features(k))
     for j in v:
         sys.stdout.write('\t' + j)
     sys.stdout.write('\n')
