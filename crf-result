@@ -1,0 +1,143 @@
+::::::::::::::
+dev.gc.tag
+::::::::::::::
+Performance by label (#match, #model, #ref) (precision, recall, F1):
+    O: (548156, 563752, 569309) (0.9723, 0.9628, 0.9676)
+    B: (49505, 70395, 63228) (0.7032, 0.7830, 0.7410)
+    I: (4651, 7634, 9244) (0.6092, 0.5031, 0.5511)
+Macro-average precision, recall, F1: (0.761610, 0.749647, 0.753221)
+Item accuracy: 602312 / 641781 (0.9385)
+Instance accuracy: 10637 / 28186 (0.3774)
+Elapsed time: 7.370000 [sec] (3824.4 [instance/sec])
+
+::::::::::::::
+dev.gcj.tag
+::::::::::::::
+Performance by label (#match, #model, #ref) (precision, recall, F1):
+    O: (546966, 561148, 569309) (0.9747, 0.9608, 0.9677)
+    B: (50606, 72287, 63228) (0.7001, 0.8004, 0.7469)
+    I: (4776, 8346, 9244) (0.5723, 0.5167, 0.5430)
+Macro-average precision, recall, F1: (0.749016, 0.759262, 0.752532)
+Item accuracy: 602348 / 641781 (0.9386)
+Instance accuracy: 10677 / 28186 (0.3788)
+Elapsed time: 59.950000 [sec] (470.2 [instance/sec])
+
+::::::::::::::
+dev.gcp.tag
+::::::::::::::
+Performance by label (#match, #model, #ref) (precision, recall, F1):
+    O: (547013, 561166, 569309) (0.9748, 0.9608, 0.9678)
+    B: (50731, 72591, 63228) (0.6989, 0.8024, 0.7470)
+    I: (4748, 8024, 9244) (0.5917, 0.5136, 0.5499)
+Macro-average precision, recall, F1: (0.755122, 0.758939, 0.754905)
+Item accuracy: 602492 / 641781 (0.9388)
+Instance accuracy: 10716 / 28186 (0.3802)
+Elapsed time: 9.370000 [sec] (3008.1 [instance/sec])
+
+::::::::::::::
+dev.gcpj.tag
+::::::::::::::
+Performance by label (#match, #model, #ref) (precision, recall, F1):
+    O: (546541, 560224, 569309) (0.9756, 0.9600, 0.9677)
+    B: (51025, 73057, 63228) (0.6984, 0.8070, 0.7488)
+    I: (4822, 8500, 9244) (0.5673, 0.5216, 0.5435)
+Macro-average precision, recall, F1: (0.747099, 0.762881, 0.753345)
+Item accuracy: 602388 / 641781 (0.9386)
+Instance accuracy: 10711 / 28186 (0.3800)
+Elapsed time: 62.630000 [sec] (450.0 [instance/sec])
+
+::::::::::::::
+dev.gp.tag
+::::::::::::::
+Performance by label (#match, #model, #ref) (precision, recall, F1):
+    O: (544103, 560061, 569309) (0.9715, 0.9557, 0.9636)
+    B: (49017, 73063, 63228) (0.6709, 0.7752, 0.7193)
+    I: (3120, 8657, 9244) (0.3604, 0.3375, 0.3486)
+Macro-average precision, recall, F1: (0.667598, 0.689494, 0.677145)
+Item accuracy: 596240 / 641781 (0.9290)
+Instance accuracy: 9682 / 28186 (0.3435)
+Elapsed time: 3.330000 [sec] (8464.3 [instance/sec])
+
+::::::::::::::
+dev.gpj.tag
+::::::::::::::
+Performance by label (#match, #model, #ref) (precision, recall, F1):
+    O: (543454, 559089, 569309) (0.9720, 0.9546, 0.9632)
+    B: (49171, 73487, 63228) (0.6691, 0.7777, 0.7193)
+    I: (3249, 9205, 9244) (0.3530, 0.3515, 0.3522)
+Macro-average precision, recall, F1: (0.664702, 0.694578, 0.678255)
+Item accuracy: 595874 / 641781 (0.9285)
+Instance accuracy: 9578 / 28186 (0.3398)
+Elapsed time: 53.370000 [sec] (528.1 [instance/sec])
+
+::::::::::::::
+dev.lc.tag
+::::::::::::::
+Performance by label (#match, #model, #ref) (precision, recall, F1):
+    O: (620259, 635928, 622526) (0.9754, 0.9964, 0.9857)
+    B: (2353, 3914, 13359) (0.6012, 0.1761, 0.2724)
+    I: (1123, 1939, 5896) (0.5792, 0.1905, 0.2867)
+Macro-average precision, recall, F1: (0.718567, 0.454321, 0.514953)
+Item accuracy: 623735 / 641781 (0.9719)
+Instance accuracy: 19734 / 28186 (0.7001)
+Elapsed time: 7.310000 [sec] (3855.8 [instance/sec])
+
+::::::::::::::
+dev.lcj.tag
+::::::::::::::
+Performance by label (#match, #model, #ref) (precision, recall, F1):
+    O: (619110, 633822, 622526) (0.9768, 0.9945, 0.9856)
+    B: (3119, 5482, 13359) (0.5690, 0.2335, 0.3311)
+    I: (1248, 2477, 5896) (0.5038, 0.2117, 0.2981)
+Macro-average precision, recall, F1: (0.683192, 0.479886, 0.538253)
+Item accuracy: 623477 / 641781 (0.9715)
+Instance accuracy: 19619 / 28186 (0.6961)
+Elapsed time: 59.420000 [sec] (474.4 [instance/sec])
+
+::::::::::::::
+dev.lcp.tag
+::::::::::::::
+Performance by label (#match, #model, #ref) (precision, recall, F1):
+    O: (619611, 634594, 622526) (0.9764, 0.9953, 0.9858)
+    B: (2922, 4955, 13359) (0.5897, 0.2187, 0.3191)
+    I: (1195, 2232, 5896) (0.5354, 0.2027, 0.2940)
+Macro-average precision, recall, F1: (0.700497, 0.472242, 0.532969)
+Item accuracy: 623728 / 641781 (0.9719)
+Instance accuracy: 19723 / 28186 (0.6997)
+Elapsed time: 9.360000 [sec] (3011.3 [instance/sec])
+
+::::::::::::::
+dev.lcpj.tag
+::::::::::::::
+Performance by label (#match, #model, #ref) (precision, recall, F1):
+    O: (618838, 633279, 622526) (0.9772, 0.9941, 0.9856)
+    B: (3336, 5883, 13359) (0.5671, 0.2497, 0.3467)
+    I: (1292, 2619, 5896) (0.4933, 0.2191, 0.3035)
+Macro-average precision, recall, F1: (0.679191, 0.487642, 0.545257)
+Item accuracy: 623466 / 641781 (0.9715)
+Instance accuracy: 19616 / 28186 (0.6959)
+Elapsed time: 62.320000 [sec] (452.3 [instance/sec])
+
+::::::::::::::
+dev.lp.tag
+::::::::::::::
+Performance by label (#match, #model, #ref) (precision, recall, F1):
+    O: (619894, 636366, 622526) (0.9741, 0.9958, 0.9848)
+    B: (2061, 3566, 13359) (0.5780, 0.1543, 0.2435)
+    I: (582, 1849, 5896) (0.3148, 0.0987, 0.1503)
+Macro-average precision, recall, F1: (0.622280, 0.416254, 0.459553)
+Item accuracy: 622537 / 641781 (0.9700)
+Instance accuracy: 19513 / 28186 (0.6923)
+Elapsed time: 3.320000 [sec] (8489.8 [instance/sec])
+
+::::::::::::::
+dev.lpj.tag
+::::::::::::::
+Performance by label (#match, #model, #ref) (precision, recall, F1):
+    O: (618846, 634685, 622526) (0.9750, 0.9941, 0.9845)
+    B: (2487, 4625, 13359) (0.5377, 0.1862, 0.2766)
+    I: (734, 2471, 5896) (0.2970, 0.1245, 0.1755)
+Macro-average precision, recall, F1: (0.603273, 0.434915, 0.478835)
+Item accuracy: 622067 / 641781 (0.9693)
+Instance accuracy: 19343 / 28186 (0.6863)
+Elapsed time: 54.060000 [sec] (521.4 [instance/sec])
