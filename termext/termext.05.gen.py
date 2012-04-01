@@ -27,6 +27,7 @@ if dicfile:
     lines = [re.split("\t", line, 1) for line in lines]
     for line in lines:
         d[line[0]] = line[1]
+	fdic.close()
 else:
     sys.stderr.write("Please input dict file")
     exit(1)

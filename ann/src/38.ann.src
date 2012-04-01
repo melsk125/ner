@@ -1,0 +1,10 @@
+T1	MODEL 487 494	antigen
+T2	MODEL 830 841	development
+T3	MODEL 127 130	man
+T4	MODEL 283 295	interstitial
+T5	MODEL 784 788	case
+T6	NP 167 179	long periods
+T7	NP 296 314	pulmonary fibrosis
+T8	NP 263 271	findings
+T9	NP 155 162	cocoons
+T10	NP 621 628	CH_<50>

@@ -1,0 +1,10 @@
+T1	MODEL 730 747	Newcastle disease
+T2	NP 164 172	Japanese
+T3	NP 95 100	birds
+T4	NP 57 62	water
+T5	MODEL 480 495	immunodiffusion
+T6	NP 638 643	those
+T7	MODEL 580 591	Anas crecca
+T8	NP 91 94	sea
+T9	NP 704 709	other
+T10	NP 452 469	their HN proteins

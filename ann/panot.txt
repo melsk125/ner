@@ -1,0 +1,200 @@
+T1	NP 963 967	city
+T2	NP 814 818	area
+T3	NP 45 52	Sapporo
+T4	NP 1156 1164	invasion
+T5	NP 801 808	Sapporo
+T6	MODEL 1168 1174	echoes
+T7	NP 1375 1383	Hamamasu
+T8	MODEL 879 885	echoes
+T9	NP 304 309	three
+T10	NP 284 296	Ishikari Bay
+T1	NP 276 281	paper
+T2	MODEL 336 343	cooling
+T3	NP 377 389	verification
+T4	NP 440 446	author
+T5	NP 426 437	development
+T6	NP 33 50	automatic winding
+T7	NP 207 221	sheet windings
+T8	NP 271 275	This
+T9	MODEL 161 179	SF6 gas&jicstsdash
+T10	NP 242 247	total
+T1	NP 122 127	paper
+T2	NP 61 71	motorcycle
+T3	NP 375 380	parts
+T4	NP 307 312	paper
+T5	NP 217 225	products
+T6	NP 164 172	bicycles
+T7	NP 302 306	This
+T8	NP 291 301	technology
+T9	MODEL 386 405	coating and gaskets
+T10	NP 337 347	technology
+T1	MODEL 680 688	pitching
+T2	NP 870 878	concrete
+T3	MODEL 617 625	pitching
+T4	NP 1143 1149	author
+T5	NP 79 86	morning
+T6	MODEL 155 171	bearing elements
+T7	MODEL 459 465	result
+T8	NP 104 108	1995
+T9	NP 222 227	order
+T10	NP 611 616	Stone
+T1	MODEL 898 904	phonon
+T2	MODEL 99 107	graphite
+T3	NP 521 526	model
+T4	NP 674 680	theory
+T5	MODEL 809 815	phonon
+T6	NP 723 744	structural perfection
+T7	NP 580 586	itself
+T8	NP 553 576	several inconsistencies
+T9	NP 537 548	theirtheory
+T10	MODEL 394 401	surface
+T1	MODEL 487 494	antigen
+T2	NP 830 841	development
+T3	NP 127 130	man
+T4	MODEL 283 295	interstitial
+T5	NP 784 788	case
+T6	NP 167 179	long periods
+T7	MODEL 296 314	pulmonary fibrosis
+T8	NP 263 271	findings
+T9	MODEL 155 162	cocoons
+T10	MODEL 621 628	CH_<50>
+T1	MODEL 388 394	phenol
+T2	NP 41 45	nest
+T3	NP 446 450	pain
+T4	NP 593 599	method
+T5	MODEL 49 65	prostatic cancer
+T6	MODEL 568 579	myelopathia
+T7	NP 173 183	Every sort
+T8	MODEL 73 81	vertebra
+T9	NP 230 280	conductionof epidural block and subarachnoid block
+T10	NP 384 386	10
+T1	NP 325 331	winter
+T2	NP 141 147	series
+T3	NP 1103 1109	summer
+T4	NP 708 719	seasonality
+T5	NP 115 121	method
+T6	MODEL 723 726	MBW
+T7	MODEL 282 285	MGP
+T8	NP 1150 1158	decrease
+T9	NP 1125 1129	that
+T10	NP 1111 1115	This
+T1	NP 76 79	law
+T2	NP 506 513	opening
+T3	NP 597 600	law
+T4	NP 470 479	standards
+T5	NP 166 172	system
+T6	NP 71 75	This
+T7	NP 436 438	we
+T8	NP 319 322	etc
+T9	NP 39 44	April
+T10	NP 407 410	Oct
+T1	NP 140 143	key
+T2	MODEL 958 963	lymph
+T3	MODEL 1168 1173	lymph
+T4	NP 151 169	European Community
+T5	MODEL 832 848	peripheral blood
+T6	NP 904 906	it
+T7	NP 1156 1160	most
+T8	MODEL 438 442	AtMC
+T9	NP 649 663	common finding
+T10	NP 1082 1083	2
+T1	NP 906 910	film
+T2	NP 419 429	estimation
+T3	NP 506 512	method
+T4	NP 89 101	light source
+T5	NP 6 10	band
+T6	NP 676 679	end
+T7	NP 430 436	method
+T8	NP 564 570	result
+T9	NP 989 996	effects
+T10	NP 965 971	rsults
+T1	NP 723 734	performance
+T2	NP 996 1001	value
+T3	NP 818 824	values
+T4	NP 1358 1367	guideline
+T5	NP 488 496	recovery
+T6	NP 693 698	total
+T7	NP 299 300	2
+T8	NP 803 804	2
+T9	MODEL 446 466	Micro Turbine TCP-30
+T10	MODEL 1243 1259	micro gasturbine
+T1	MODEL 1008 1014	plasma
+T2	MODEL 482 488	plasma
+T3	NP 879 890	measurement
+T4	MODEL 23 29	plasma
+T5	NP 923 929	saliva
+T6	MODEL 419 422	CBZ
+T7	MODEL 569 571	EP
+T8	MODEL 554 557	CBZ
+T9	MODEL 62 65	CBZ
+T10	MODEL 114 121	epoxide
+T1	MODEL 730 747	Newcastle disease
+T2	NP 164 172	Japanese
+T3	NP 95 100	birds
+T4	NP 57 62	water
+T5	MODEL 480 495	immunodiffusion
+T6	NP 638 643	those
+T7	MODEL 580 591	Anas crecca
+T8	NP 91 94	sea
+T9	NP 704 709	other
+T10	NP 452 469	their HN proteins
+T1	NP 173 177	type
+T2	MODEL 248 251	CCD
+T3	NP 108 114	module
+T4	MODEL 0 7	1200DPI
+T5	NP 413 416	can
+T6	NP 361 364	one
+T7	MODEL 573 581	disorder
+T8	NP 751 755	rate
+T9	NP 649 651	it
+T10	NP 408 412	they
+T1	NP 68 77	low power
+T2	MODEL 9 13	CMOS
+T3	NP 242 247	power
+T4	MODEL 209 216	circuit
+T5	NP 302 306	well
+T6	NP 94 98	that
+T7	NP 248 253	lines
+T8	NP 110 117	622 MHz
+T9	MODEL 39 45	STM-4c
+T10	MODEL 83 93	Mux, Demux
+T1	NP 270 278	training
+T2	NP 175 184	accidents
+T3	NP 6 15	accidents
+T4	NP 328 333	paper
+T5	MODEL 141 146	aging
+T6	NP 148 150	it
+T7	MODEL 293 302	sinulator
+T8	NP 256 257	s
+T9	NP 76 114	increasing.Since psychomatic functions
+T10	MODEL 420 429	Punctions
+T1	NP 1146 1151	color
+T2	NP 488 493	color
+T3	NP 961 966	value
+T4	NP 1470 1483	consciousness
+T5	NP 659 668	age group
+T6	NP 1403 1411	decrease
+T7	NP 294 306	contribution
+T8	NP 238 244	female
+T9	NP 738 744	change
+T10	MODEL 847 848	V
+T1	NP 519 523	well
+T2	MODEL 617 623	energy
+T3	MODEL 0 13	Photoemission
+T4	MODEL 19 21	Al
+T5	MODEL 161 166	steel
+T6	NP 333 338	range
+T7	NP 535 539	that
+T8	NP 271 281	scratching
+T9	NP 400 410	scratching
+T10	MODEL 450 463	manifestation
+T1	NP 992 993	S
+T2	MODEL 287 288	C
+T3	MODEL 702 715	chlorophyll a
+T4	MODEL 1041 1050	advection
+T5	MODEL 807 820	phytoplankton
+T6	MODEL 983 991	N-10&deg
+T7	NP 447 458	mixed-layer
+T8	NP 329 333	that
+T9	NP 1056 1060	rate
+T10	MODEL 928 931	DOC
